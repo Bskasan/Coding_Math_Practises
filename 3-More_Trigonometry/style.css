@@ -1,0 +1,8 @@
+* {
+  margin: 0px;
+}
+
+#canvas {
+  /* ? To remove the scrool bar*/
+  display: block;
+}
