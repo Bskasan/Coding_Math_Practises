@@ -23,7 +23,11 @@ window.onload = function () {
     context.beginPath();
 
     //! The arc() method creates a circular arc centered at (x, y) with a radius of radius. The path starts at startAngle, ends at endAngle, and travels in the direction given by counterclockwise (defaulting to clockwise).
-    context.arc(x, y, 100, 0, Math.PI * 2, false);
+    context.arc(x, y, 25, 0, Math.PI * 2, false);
     context.fill();
+
+    angle += speed;
+
+    requestAnimationFrame(render);
   }
 };
