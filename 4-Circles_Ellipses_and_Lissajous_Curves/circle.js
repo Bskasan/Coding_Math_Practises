@@ -16,6 +16,14 @@ window.onload = function () {
   render();
 
   function render() {
-    
+    context.clearRect(0, 0, width, height);
+    x = centerX + Math.cos(angle) * radius;
+    y = centerY + Math.sin(angle) * radius;
+
+    context.beginPath();
+
+    //! The arc() method creates a circular arc centered at (x, y) with a radius of radius. The path starts at startAngle, ends at endAngle, and travels in the direction given by counterclockwise (defaulting to clockwise).
+    context.arc(x, y, 100, 0, Math.PI * 2, false);
+    context.fill();
   }
 };
