@@ -32,9 +32,7 @@ window.onload = function () {
     context.arc(x, y, 25, 0, Math.PI * 2, false);
     context.fill();
 
-    // angle += speed;
-    xAngle += xSpeed;
-    yAngle += ySpeed;
+    angle += speed;
 
     requestAnimationFrame(render);
   }
