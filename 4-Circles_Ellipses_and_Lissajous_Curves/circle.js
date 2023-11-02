@@ -19,8 +19,6 @@ window.onload = function () {
     x,
     y;
 
-  render();
-
   function render() {
     context.clearRect(0, 0, width, height);
     x = centerX + Math.cos(xAngle) * xRadius;
@@ -32,7 +30,9 @@ window.onload = function () {
     context.arc(x, y, 25, 0, Math.PI * 2, false);
     context.fill();
 
-    angle += speed;
+    // angle += speed;
+    xAngle += xSpeed;
+    yAngle += ySpeed;
 
     requestAnimationFrame(render);
   }
