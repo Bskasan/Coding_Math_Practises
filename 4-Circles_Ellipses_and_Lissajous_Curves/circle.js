@@ -16,13 +16,19 @@ window.onload = function () {
     //speed = 0.1,
     //xSpeed = 0.01,
     //ySpeed = 0.131,
+    numObjects = 20,
+    slice = (Math.PI * 2) / numObjects,
     x,
     y;
 
-  x = centerX + Math.cos(angle) * radius;
-  y = centerY + Math.sin(angle) * radius;
-  context.beginPath();
-  context.arc(x, y, 10, 0, Math.PI * 2, false);
+  for (var i = 0; i < numObjects; i += 1) {
+    angle = i * slice;
+    x = centerX + Math.cos(angle) * radius;
+    y = centerY + Math.sin(angle) * radius;
+    context.beginPath();
+    context.arc(x, y, 10, 0, Math.PI * 2, false);
+    context.fill();
+  }
 
   // render();
 
