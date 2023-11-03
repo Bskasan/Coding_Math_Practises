@@ -39,6 +39,7 @@ window.onload = function () {
     dX = event.clientX - arrowX;
     dY = event.clientY - arrowY;
 
-    angle = Math.atan(dY / dX);
+    // Arctangent
+    angle = Math.atan2(dY, dX);
   });
 };
